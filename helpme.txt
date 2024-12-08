@@ -1,0 +1,7 @@
+
+symfony console importmap:require bootstrap = récupérer le thème bootstrap
+symfony serve -d = démarrer le serveur de test Symfony
+symfony console make:controller = créer un controlleur
+symfony console make:form = créer un formulaire
+symfony console make:migration = créer une migration (créer le script sql)
+symfony console doctrine:migrations:migrate = exécuter toutes les migrations que vous pourriez avoir en attente

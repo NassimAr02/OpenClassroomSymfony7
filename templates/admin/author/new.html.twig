@@ -1,0 +1,24 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Hello AuthorController!{% endblock %}
+
+{% block body %}
+<style>
+  /* Votre style CSS ici */
+</style>
+
+<div class="form">
+    <div class="w-50 m-auto">
+        {{ form_start(form) }}
+        <h1>Ajout d'auteur</h1>
+        {{ form_row(form.name, { label: 'Nom' }) }}
+        {{ form_row(form.dateOfBirth, { label: 'Date de Naissance' }) }}
+        {{ form_row(form.dateOfDeath, { label: 'Date de décès' }) }}
+        {{ form_row(form.nationality, { label: 'Nationalité' }) }}
+        {{ form_row(form.books, { label: 'Livre(s)' }) }}
+        {{ form_widget(form) }}
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+        {{ form_end(form) }}
+    </div>
+</div>
+{% endblock %}
