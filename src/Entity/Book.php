@@ -36,6 +36,10 @@ class Book
     #[ORM\Column(length: 255)]
     private ?BookStatus $status = null;
 
+    #[ORM\ManyToOne(inversedBy: 'books')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Editor $editor = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -121,6 +125,18 @@ class Book
     public function setStatus(BookStatus $status): static
     {
         $this->status = $status;
+
+        return $this;
+    }
+
+    public function getEditor(): ?Editor
+    {
+        return $this->editor;
+    }
+
+    public function setEditor(?Editor $editor): static
+    {
+        $this->editor = $editor;
 
         return $this;
     }
